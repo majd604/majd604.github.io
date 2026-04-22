@@ -1,12 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Majd Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #111827;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 10px 18px;
+      border: 1px solid #bcd3ff;
+      border-radius: 999px;
+      background: #eaf2ff;
+      color: #2563eb;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 56px;
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+
+    h1 span {
+      color: #3b82f6;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      color: #4b5563;
+      margin-bottom: 18px;
+    }
+
+    .desc {
+      max-width: 700px;
+      margin: 0 auto 28px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #6b7280;
+    }
+
+    .buttons a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 12px;
+      margin: 8px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #111827;
+      border: 1px solid #d1d5db;
+    }
+
+    .btn-secondary:hover {
+      background: #f3f4f6;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 38px;
+      }
+
+      .subtitle {
+        font-size: 20px;
+      }
+
+      .desc {
+        font-size: 16px;
+      }
+
+      .profile-img {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
 </head>
-<body style="text-align:center; font-family:Arial;">
+<body>
+  <section class="hero">
+    <div class="container">
+      <div class="badge">Available for new opportunities</div>
 
-  <h1>Hi, I'm Majd Noufal 👋</h1>
-  <p>Flutter Developer</p>
+      <img
+        class="profile-img"
+        src="https://via.placeholder.com/300"
+        alt="Majd Noufal"
+      />
 
+      <h1>Hi, I'm <span>Majd Noufal</span></h1>
+
+      <p class="subtitle">Flutter Developer</p>
+
+      <p class="desc">
+        I build modern mobile applications using Flutter, Firebase, REST APIs,
+        GetX, BLoC, and clean UI design.
+      </p>
+
+      <div class="buttons">
+        <a class="btn-primary" href="https://github.com/majd604" target="_blank">GitHub</a>
+        <a class="btn-secondary" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
