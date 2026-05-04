@@ -397,6 +397,28 @@ footer {
 }
 footer span { color: var(--blue2); }
 
+/* ── Documents ─────────────────────────────────────────────── */
+#documents { padding: 100px 0; }
+.docs-grid { display: flex; flex-direction: column; gap: 16px; }
+.doc-card {
+  display: flex; align-items: center; gap: 20px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 24px 28px;
+  text-decoration: none; color: var(--text);
+  transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+.doc-card:hover {
+  transform: translateX(6px);
+  box-shadow: 0 8px 40px rgba(0,0,0,.4);
+  border-color: rgba(59,130,246,.35);
+}
+.doc-icon { font-size: 32px; flex-shrink: 0; }
+.doc-body { flex: 1; }
+.doc-title { font-family: 'Clash Display', sans-serif; font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+.doc-sub { color: var(--muted); font-size: 13px; }
+.doc-arrow { color: var(--blue2); flex-shrink: 0; transition: transform .3s; }
+.doc-card:hover .doc-arrow { transform: translateX(4px); color: var(--cyan); }
+
 /* ── Scroll progress ───────────────────────────────────────── */
 .scroll-progress {
   position: fixed; top: 0; left: 0; height: 2px; z-index: 200;
@@ -471,8 +493,9 @@ footer span { color: var(--blue2); }
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
+        <a href="#documents">Documents</a>
         <a href="#contact">Contact</a>
-        <a class="nav-cv" href="Majd_CV.pdf" target="_blank">Download CV</a>
+        <a class="nav-cv" href="Majd_CV.pdf" target="_blank">Show CV</a>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -481,8 +504,9 @@ footer span { color: var(--blue2); }
     <div class="mobile-menu" id="mobileMenu">
       <a href="#about" onclick="closeMobile()">About</a>
       <a href="#projects" onclick="closeMobile()">Projects</a>
+      <a href="#documents" onclick="closeMobile()">Documents</a>
       <a href="#contact" onclick="closeMobile()">Contact</a>
-      <a class="nav-cv" href="Majd_CV.pdf" target="_blank">Download CV</a>
+      <a class="nav-cv" href="Majd_CV.pdf" target="_blank">Show CV</a>
     </div>
   </div>
 </nav>
@@ -515,7 +539,7 @@ footer span { color: var(--blue2); }
           </a>
           <a class="btn btn-ghost" href="Majd_CV.pdf" target="_blank">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download CV
+            Show CV
           </a>
           <a class="btn btn-cyan" href="#projects">
             View Projects
@@ -546,7 +570,7 @@ footer span { color: var(--blue2); }
         <div class="section-label">About me</div>
         <h2 class="section-title">Building apps<br>people love</h2>
         <p>I'm a Flutter Developer with hands-on experience building 4+ full-featured mobile applications across e-commerce, healthcare, car rental, and food delivery.</p>
-        <p>I'm passionate about clean architecture, state management patterns, and delivering pixel-perfect UIs. I hold a Bachelor of Informatics Engineering from Syrian Private University (2020–2025).</p>
+        <p>Currently a <b style="color:var(--blue2)">4th-year Informatics Engineering student</b> at Syrian Private University (2020–Present). I relocated to Cairo, Egypt, and hold official university documents confirming my academic status.</p>
         <div class="stats-row">
           <div class="stat">
             <div class="stat-num">4+</div>
@@ -710,6 +734,47 @@ footer span { color: var(--blue2); }
   </div>
 </section>
 
+<!-- ── DOCUMENTS ───────────────────────────────────────────── -->
+<section id="documents">
+  <div class="wrap">
+    <div class="reveal" style="margin-bottom:48px">
+      <div class="section-label">Academic Credentials</div>
+      <h2 class="section-title">Official Documents</h2>
+      <p class="section-sub">University documents confirming my 4th-year academic status at Syrian Private University.</p>
+    </div>
+    <div class="docs-grid reveal reveal-delay-1">
+
+      <a class="doc-card" href="https://github.com/majd604/majd-documents/blob/main/Recommendation%20Letter%20%E2%80%93%20Dr.%20Akram%20Massouh.pdf" target="_blank">
+        <div class="doc-icon">📄</div>
+        <div class="doc-body">
+          <div class="doc-title">Recommendation Letter</div>
+          <div class="doc-sub">Dr. Akram Massouh — Syrian Private University</div>
+        </div>
+        <svg class="doc-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+
+      <a class="doc-card" href="https://github.com/majd604/majd-documents/blob/main/Recommendation%20Letter%20%E2%80%93%20Dr.%20Fadi%20Ghasan%20Ibrahim.pdf" target="_blank">
+        <div class="doc-icon">📄</div>
+        <div class="doc-body">
+          <div class="doc-title">Recommendation Letter</div>
+          <div class="doc-sub">Dr. Fadi Ghasan Ibrahim — Syrian Private University</div>
+        </div>
+        <svg class="doc-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+
+      <a class="doc-card" href="https://github.com/majd604/majd-documents/blob/main/Student%20Status%20Certificate%20%E2%80%93%20Syrian%20Private%20University.pdf" target="_blank">
+        <div class="doc-icon">🎓</div>
+        <div class="doc-body">
+          <div class="doc-title">Student Status Certificate</div>
+          <div class="doc-sub">4th-Year Informatics Engineering — Syrian Private University</div>
+        </div>
+        <svg class="doc-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 <!-- ── CONTACT ────────────────────────────────────────────── -->
 <section id="contact">
   <div class="wrap">
@@ -724,7 +789,7 @@ footer span { color: var(--blue2); }
         </a>
         <a class="btn btn-ghost" href="https://github.com/majd604" target="_blank">GitHub</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/majd-nouful-69a6a73a2/" target="_blank">LinkedIn</a>
-        <a class="btn btn-cyan" href="Majd_CV.pdf" target="_blank">Download CV</a>
+        <a class="btn btn-cyan" href="Majd_CV.pdf" target="_blank">Show CV</a>
       </div>
     </div>
   </div>
